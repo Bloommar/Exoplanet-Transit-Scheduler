@@ -1,4 +1,4 @@
-#Exoplanet Transit Scheduler 
+# Exoplanet Transit Scheduler 
 ###test
 
 This python code has the purpose to create a schedule file that contains all the exoplanets transits that are observable by your telescope in your timeframe.
