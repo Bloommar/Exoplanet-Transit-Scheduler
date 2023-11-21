@@ -439,8 +439,13 @@ new_df_3=pd.DataFrame.from_dict(data)
 #filtering the data by the sun altitude 
 #we want it under -10 degrees which is over nautical twillight but the sun light won't bother our our observations
 
-new_df_3=new_df_3[
-    ((new_df_3['sun_altitudes_before'] <= -10.0) & (new_df_3['sun_altitudes_after']<=-10.0))
+new_df_3 = new_df_3[
+    (
+        (new_df_3['sun_altitudes_before'] <= -10.0) & 
+        (new_df_3['sun_altitudes_after'] <= -10.0) &
+        (new_df_3['start_altitude'] >= 30.0) & 
+        (new_df_3['end_altitude'] >= 30.0)
+    )
 ]
 
 #introducing a function that will convert the times to utc, 'cause afterwards we want to filter it 
